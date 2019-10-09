@@ -28,6 +28,7 @@ class CashRegister
   end
   
   def items
-    @items << self.add_item(title) 
+    @items
+  en
 
 end
