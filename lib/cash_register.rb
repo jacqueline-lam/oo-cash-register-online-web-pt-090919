@@ -33,6 +33,7 @@ class CashRegister
     end
   end
   
+  # Returns an array of strings detailing the titles of the items
   def items
     @items
   end
