@@ -13,6 +13,8 @@ class CashRegister
     se
   end
   
+  
+  # tip: can call instance method inside another instnace method
   def apply_discount
     if @discount
       discount = @total * @discount / 100 
