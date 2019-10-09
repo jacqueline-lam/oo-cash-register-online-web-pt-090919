@@ -20,9 +20,6 @@ class CashRegister
     @items << item_data
     @total += (price * quantity)
     self.last_trans = item_data
-    
-    # quantity.times { @items << title }
-    # self.last_trans = price
   end
   
   # tip: can call instance method inside another instnace method
