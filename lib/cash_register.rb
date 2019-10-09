@@ -39,8 +39,8 @@ class CashRegister
       @total = 0.0  
     end
     
-      cash_register.add_item("tomato", 1.76, 2)
-      expect{cash_register.void_last_transaction}.to change{cash_register.total}.from(3.52).to(0.0)
+      # cash_register.add_item("tomato", 1.76, 2)
+      # expect{cash_register.void_last_transaction}.to change{cash_register.total}.from(3.52).to(0.0)
   end
 
 end
