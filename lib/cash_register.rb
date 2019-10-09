@@ -1,7 +1,7 @@
 require 'pry'
 
 class CashRegister
-  attr_accessor :total, :discount, :add_item, :items, :last_trans #return current total when enter instance.total
+  attr_accessor :total, :discount, :add_item, :items,
 
   
   def initialize(discount = nil)
@@ -18,7 +18,6 @@ class CashRegister
     }
     @items << item_data
     @total += (price * quantity)
-    self.last_trans = item_data
   end
   
   # tip: can call instance method inside another instnace method
@@ -48,7 +47,7 @@ class CashRegister
   # expect{cash_register.void_last_transaction}.to change{cash_register.total}.from(3.52).to(0.0)
   
   def void_last_transaction
-    @total -= self.last_trans 
+    # @total -= self.last_trans 
     # @items.pop if @items != []
     # #return total to 0.0 if all items removed
     # if @items = [] 
@@ -56,7 +55,8 @@ class CashRegister
     # end
     # return @total
     
-  
+    last_trans = self.items.pop
+    
   end
 
 end
