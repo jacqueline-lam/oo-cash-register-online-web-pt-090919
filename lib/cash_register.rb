@@ -1,7 +1,7 @@
 require 'pry'
 
 class CashRegister
-  attr_accessor :total, :discount, :add_item, :items #return current total when enter instance.total
+  attr_accessor :total, :discount, :add_item, :items, :last_trans #return current total when enter instance.total
 
   
   def initialize(discount = nil)
@@ -13,6 +13,7 @@ class CashRegister
   def add_item(title, price, quantity = 1)
     @total += ( price * quantity)
     quantity.times { @items << title }
+    self.last_trans = price
   end
   
   # tip: can call instance method inside another instnace method
@@ -32,7 +33,7 @@ class CashRegister
   end
   
   def void_last_transaction
-    
+    @total -= self.last_trans 
   end
 
 end
