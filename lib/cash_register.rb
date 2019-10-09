@@ -11,9 +11,15 @@ class CashRegister
   end
   
   def add_item(title, price, quantity = 1)
+    @items << {
+      title: title,
+      price: price,
+      quantity: quantity
+    }
+    
     @total += (price * quantity)
-    quantity.times { @items << title }
-    self.last_trans = price
+    # quantity.times { @items << title }
+    # self.last_trans = price
   end
   
   # tip: can call instance method inside another instnace method
