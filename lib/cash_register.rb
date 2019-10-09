@@ -35,7 +35,13 @@ class CashRegister
   
   # Returns an array of strings detailing the titles of the items
   def items
-    return @items.map { |item_data| item_data[:title] }
+    to_return = []
+    @items.each do |item_data|
+      item_data[:quantity].times do
+        to_return << item_data[:title]
+      end
+    end
+    return to_return
   end
   
   # cash_register.add_item("tomato", 1.76, 2)
