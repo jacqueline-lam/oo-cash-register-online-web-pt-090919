@@ -14,9 +14,9 @@ class CashRegister
   
   def apply_discount
     # binding.pry
-    total_in_float = @total * (1 - @discount)
-    @total = total_in_float.to_i
+    @total = (@total - @total * @discount).to_i
     puts "After the discount, the total comes to $#{@total}."
+    
   end
   
   
