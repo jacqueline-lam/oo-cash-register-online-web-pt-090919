@@ -13,10 +13,11 @@ class CashRegister
     item_data = {
       title: title,
       price: price,
-      quantity: quantity
+      quantity: quantity,
+      transaction_total: price * quantity
     }
     @items << item_data
-    @total += (price * quantity)
+    @total += item_data[:transaction_total]
   end
   
   # tip: can call instance method inside another instnace method
