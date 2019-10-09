@@ -56,7 +56,7 @@ class CashRegister
     # return @total
     
     last_trans = self.items.pop
-    @total -= (last_trans[:price] * last_trans[:quantity])
+    @total -= last_trans[:transaction_total]
   end
 
 end
