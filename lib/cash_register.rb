@@ -12,7 +12,7 @@ class CashRegister
   
   def add_item(title, price, quantity = 1)
     @total += ( price * quantity)
-    @items << title
+    @items << title 
   end
   
   # tip: can call instance method inside another instnace method
@@ -27,10 +27,6 @@ class CashRegister
     end
   end
   
-  def items
-    @items  
-  end
-
 
 
 end
