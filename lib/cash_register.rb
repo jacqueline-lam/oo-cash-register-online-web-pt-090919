@@ -43,9 +43,6 @@ class CashRegister
     return to_return
   end
   
-  # cash_register.add_item("tomato", 1.76, 2)
-  # expect{cash_register.void_last_transaction}.to change{cash_register.total}.from(3.52).to(0.0)
-  
   def void_last_transaction
     last_trans = @items.pop
     @total -= last_trans[:transaction_total]
