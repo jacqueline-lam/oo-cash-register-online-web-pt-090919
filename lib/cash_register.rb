@@ -34,7 +34,7 @@ class CashRegister
   
   def void_last_transaction
     @total -= self.last_trans 
-    @items.pop
+    @items.pop if @items != []
     #return total to 0.0 if all items removed
     if @items = [] 
       @total = 0.0  
