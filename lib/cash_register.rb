@@ -13,18 +13,13 @@ class CashRegister
   end
   
   def apply_discount
-    return "There is no discount to apply." unless @discount
-    discount = @total * @discount / 100 
-    @total = @total - discount
-    return "After the discount, the total comes to $#{@total}."
-    
-    # if @discount
-    #   discount = @total * @discount / 100 
-    #   @total = @total - discount
-    #   return "After the discount, the total comes to $#{@total}."
-    # else
-    #   return "There is no discount to apply."
-    # end
+    if @discount
+      discount = @total * @discount / 100 
+      @total = @total - discount
+      return "After the discount, the total comes to $#{@total}."
+    else #cash register wasn't initiailzied w/ discount
+      return "There is no discount to apply."
+    end
     
   end
   
