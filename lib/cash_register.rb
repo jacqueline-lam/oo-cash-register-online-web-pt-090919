@@ -3,7 +3,7 @@ require 'pry'
 class CashRegister
   attr_accessor :total, :discount, :add_item #return current total when enter instance.total
   
-  def initialize(discount = 0.20)
+  def initialize(discount = nil)
     @total = 0
     @discount = discount
   end
