@@ -47,14 +47,6 @@ class CashRegister
   # expect{cash_register.void_last_transaction}.to change{cash_register.total}.from(3.52).to(0.0)
   
   def void_last_transaction
-    # @total -= self.last_trans 
-    # @items.pop if @items != []
-    # #return total to 0.0 if all items removed
-    # if @items = [] 
-    #   @total = 0.0  
-    # end
-    # return @total
-    
     last_trans = @items.pop
     @total -= last_trans[:transaction_total]
   end
