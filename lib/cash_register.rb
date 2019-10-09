@@ -17,12 +17,14 @@ class CashRegister
       discount = @total * @discount / 100 
       @total = @total - discount
       return "After the discount, the total comes to $#{@total}."
-    else #cash register wasn't initiailzied w/ discount
+    else # cash register wasn't initiailzied w/ discount
       return "There is no discount to apply."
     end
-    
   end
   
+  def items
+    
+  end
   
  
 
