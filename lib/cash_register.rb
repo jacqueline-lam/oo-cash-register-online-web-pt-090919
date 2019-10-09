@@ -12,12 +12,12 @@ class CashRegister
     @total += ( price * quantity)
   end
   
-  # def apply_discount
-  #   # binding.pry
-  #   @total = (@total - @total * @discount).to_i
-  #   puts "After the discount, the total comes to $#{@total}."
+  def apply_discount
+    # binding.pry
+    @total = (@total - @total * @discount).to_i
+    puts "After the discount, the total comes to $#{@total}."
     
-  # end
+  end
   
   
   # context 'the cash register was initialized with an employee discount' do
