@@ -54,7 +54,7 @@ class CashRegister
     #   @total = 0.0  
     # end
     # return @total
-    
+    binding.pry
     last_trans = self.items.pop
     @total -= last_trans[:transaction_total]
   end
