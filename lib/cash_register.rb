@@ -16,7 +16,6 @@ class CashRegister
       price: price,
       quantity: quantity
     }
-    
     @items << item_data
     @total += (price * quantity)
     self.last_trans = item_data
