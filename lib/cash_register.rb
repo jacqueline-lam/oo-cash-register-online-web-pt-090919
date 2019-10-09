@@ -2,8 +2,7 @@ require 'pry'
 
 class CashRegister
   attr_accessor :total, :discount, :add_item #return current total when enter instance.total
-  
-  @@items = []
+
   
   def initialize(discount = nil)
     @total = 0
@@ -12,7 +11,7 @@ class CashRegister
   
   def add_item(title, price, quantity = 1)
     @total += ( price * quantity)
-    @@items << title
+    # @@items << title
   end
   
   # tip: can call instance method inside another instnace method
