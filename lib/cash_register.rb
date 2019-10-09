@@ -7,7 +7,7 @@ class CashRegister
   def initialize(discount = nil)
     @total = 0
     @discount = discount
-    @items = [] # contains 
+    @items = [] # contains a log of all transactions (title, price, quantity)
   end
   
   def add_item(title, price, quantity = 1)
