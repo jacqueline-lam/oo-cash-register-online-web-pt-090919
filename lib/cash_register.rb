@@ -32,6 +32,9 @@ class CashRegister
     @items
   end
   
+  # cash_register.add_item("tomato", 1.76, 2)
+  # expect{cash_register.void_last_transaction}.to change{cash_register.total}.from(3.52).to(0.0)
+  
   def void_last_transaction
     @total -= self.last_trans 
     # @items.pop if @items != []
@@ -40,8 +43,8 @@ class CashRegister
     #   @total = 0.0  
     # end
     # return @total
-      # cash_register.add_item("tomato", 1.76, 2)
-      # expect{cash_register.void_last_transaction}.to change{cash_register.total}.from(3.52).to(0.0)
+    
+  
   end
 
 end
