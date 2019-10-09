@@ -15,8 +15,9 @@ class CashRegister
   
   
   # tip: can call instance method inside another instnace method
+  # to call @total, use self.total inside another #method
   def apply_discount
-    if @discount
+    if self.discount
       discount = @total * @discount / 100 
       @total = @total - discount
       return "After the discount, the total comes to $#{@total}."
